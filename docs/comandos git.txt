@@ -1,0 +1,19 @@
+1. Descargar GIT
+    - https://git-scm.com/
+2. Crear una Cuenta en (GITHUB, GITLAB, BITBUCKET)
+    - GITHUB
+3. Configurar GIT:
+    > git config --global user.name "Su Nombre"
+    > git config --global user.email "sucorreo@mail.com"
+--------------- COMANDOS GIT ----------------------
+
+Si existe el repositorio (proyecto) : CLONAR
+    > git clone direccion_remota
+
+si no existe : Iniciar un nuevo repositorio
+    > git init
+-----................
+
+git add
+git commit 
+git push

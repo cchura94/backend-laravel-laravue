@@ -1,0 +1,23 @@
+1. Configuracion con BD
+    > crear la BD
+    > config en (.env) BD
+
+2. Migrar los archivos (migration) por defecto de Laravel
+    Generar las tablas en la BD
+
+    > php artisan migrate
+
+-------------- AUTH con Laravel SANCTUM  ----------------
+Integracion: 
+    1. Instalar SANCTUM
+        > composer require laravel/sanctum
+        (verificar el archivo composer.json - si ya está instalado)
+    2. Verificar si existe el archivo (config/sanctum.php) 
+        - si no existe 
+        > php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+    3. Agregar el middleware de Sanctum al grupo de (api) dentro:
+        (app/Http/Kernel.php)
+
+Autenticación:
+    Generar el controlador AuthController
+    > php artisan make:controller AuthController
