@@ -12,8 +12,14 @@ Si existe el repositorio (proyecto) : CLONAR
 
 si no existe : Iniciar un nuevo repositorio
     > git init
+
+asignar el repositorio remoto: 
+    > git remote add origin https://github.com/cchura94/backend-laravel-laravue.git
 -----................
 
-git add
-git commit 
-git push
+git add .
+git commit -m "Proyecto inicial + Login Sanctum"
+git push origin master
+
+----------------------
+git pull origin master
