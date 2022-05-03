@@ -21,3 +21,9 @@ Integracion:
 Autenticación:
     Generar el controlador AuthController
     > php artisan make:controller AuthController
+
+----------------- Migraciones  --------------------
+    > php artisan make:model Persona -m
+
+-----------------  Controladores ------------------
+    > php artisan make:controller PersonaController --api

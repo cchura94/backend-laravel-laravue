@@ -1,0 +1,17 @@
+GET http://127.0.0.1:8000/api/persona?orderby=id&q=a&limit=5&page=1
+Accept: application/json
+Authorization: Bearer 7|KQ1o1sjjsk0ULtA3MdKUpvO5ktsUpIMpuQYBx9tD
+
+### Guardar Persona
+POST http://127.0.0.1:8000/api/persona
+Accept: application/json
+Authorization: Bearer 7|KQ1o1sjjsk0ULtA3MdKUpvO5ktsUpIMpuQYBx9tD
+Content-Type: application/json
+
+{
+    "nombres": "Ana",
+    "apellidos": "Sanchez",
+    "ci_nit": "444444",
+    "direccion": "Av ABC",
+    "telefono": "678678"
+}
