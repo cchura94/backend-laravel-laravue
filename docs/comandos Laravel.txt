@@ -24,6 +24,13 @@ Autenticación:
 
 ----------------- Migraciones  --------------------
     > php artisan make:model Persona -m
+    > php artisan make:model Carrera -m
+    > php artisan make:model Materia -m
+    > php artisan make:model Aula -m
+    > php artisan make:model Gestion -m
+    > php artisan make:migration create_materia_persona_table
+    > php artisan make:migration create_aula_materia_table
+
 
 -----------------  Controladores ------------------
     > php artisan make:controller PersonaController --api
