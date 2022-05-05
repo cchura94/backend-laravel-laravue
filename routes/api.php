@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CarreraController;
+use App\Http\Controllers\MateriaController;
 use App\Http\Controllers\PersonaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +28,8 @@ Route::group(["prefix" => "/v1/auth"], function(){
 Route::group(["middleware" => "auth:sanctum"], function(){
     
     // recursos api
+    Route::apiResource("materia", MateriaController::class);
+    Route::apiResource("carrera", CarreraController::class);
     Route::apiResource("persona", PersonaController::class);
 });
 
