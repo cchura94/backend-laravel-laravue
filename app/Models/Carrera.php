@@ -10,4 +10,9 @@ class Carrera extends Model
     use HasFactory;
 
     protected $fillable = ['nombre', 'detalle'];
+
+    public function materias()
+    {
+        return $this->hasMany(Materia::class);
+    }
 }

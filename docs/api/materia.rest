@@ -1,0 +1,10 @@
+POST http://127.0.0.1:8000/api/materia
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 61|5weoGy0RIGAVt5tmC5d3ptO0wt0UonyMDVDDH71L
+
+{
+    "nombre": "PROGRAMACION 2",
+    "sigla": "PROG2",
+    "carrera_id": 1
+}

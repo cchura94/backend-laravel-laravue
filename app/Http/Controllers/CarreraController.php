@@ -58,6 +58,7 @@ class CarreraController extends Controller
     public function show($id)
     {
         $carrera = Carrera::findOrFail($id);
+        $carrera->materias;
         return response()->json($carrera, 200);
     }
 
