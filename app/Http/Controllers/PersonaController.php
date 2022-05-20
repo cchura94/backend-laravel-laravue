@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Persona;
+use Faker\Provider\ar_EG\Person;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -122,6 +123,31 @@ class PersonaController extends Controller
         // responder
         return response()->json([
             "mensaje" => "Eliminación correcta",
+            "error" => null,
+            "status" => true
+        ], 200);
+    }
+
+    public function asignarMaterias(Request $request, $id)
+    {
+        /*
+            [1, 6, 3, 8]
+        */
+        $materias = $request->materias;
+        $gestion = $request->gestion;
+        $rol = $request->rol;
+
+        $ass=[];
+        for ($i=0; $i<count($materias); $i++) {
+            $ass[$materias[$i]] = ["gestion_id" => $gestion, "rol" => $rol];
+        }
+
+        // return $ass;
+        $persona = Persona::find($id);
+        $persona->materias()->attach($ass);
+
+        return response()->json([
+            "mensaje" => "Asignacion correcta",
             "error" => null,
             "status" => true
         ], 200);

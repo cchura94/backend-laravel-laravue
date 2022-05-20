@@ -1,6 +1,6 @@
 GET http://127.0.0.1:8000/api/persona?orderby=id&q=a&limit=5&page=1
 Accept: application/json
-Authorization: Bearer 7|KQ1o1sjjsk0ULtA3MdKUpvO5ktsUpIMpuQYBx9tD
+Authorization: Bearer 64|L0YTpuyw0qvhXrcudIYQf9trDOlNGqbFhZigqARG
 
 ### Guardar Persona
 POST http://127.0.0.1:8000/api/persona
@@ -14,4 +14,17 @@ Content-Type: application/json
     "ci_nit": "444444",
     "direccion": "Av ABC",
     "telefono": "678678"
+}
+
+
+### asignacion de materias
+POST http://127.0.0.1:8000/api/persona/1/asignacion-materias
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 64|L0YTpuyw0qvhXrcudIYQf9trDOlNGqbFhZigqARG
+
+{
+    "materias": [4],
+    "gestion": 1,
+    "rol": "Estudiante"
 }

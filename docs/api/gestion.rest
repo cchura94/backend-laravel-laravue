@@ -1,0 +1,8 @@
+POST http://127.0.0.1:8000/api/gestion
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 64|L0YTpuyw0qvhXrcudIYQf9trDOlNGqbFhZigqARG
+
+{
+    "gestion": "2-2022"
+}

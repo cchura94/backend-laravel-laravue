@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CarreraController;
+use App\Http\Controllers\GestionController;
 use App\Http\Controllers\MateriaController;
 use App\Http\Controllers\PersonaController;
 use Illuminate\Http\Request;
@@ -26,8 +27,13 @@ Route::group(["prefix" => "/v1/auth"], function(){
 
 //  
 Route::group(["middleware" => "auth:sanctum"], function(){
+
+    // asignacion materias
+    Route::post("persona/{id}/asignacion-materias", [PersonaController::class, "asignarMaterias"]);
     
+    Route::post("gestion/{id}/cabiar-gestion", [GestionController::class, "cambiarGestion"]);
     // recursos api
+    Route::apiResource("gestion", GestionController::class);
     Route::apiResource("materia", MateriaController::class);
     Route::apiResource("carrera", CarreraController::class);
     Route::apiResource("persona", PersonaController::class);
