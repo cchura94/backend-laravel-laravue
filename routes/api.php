@@ -46,3 +46,7 @@ Route::middleware("auth:sanctum")->group(function(){
     Route::apiResource("persona", PersonaController::class);
 });
 */
+
+Route::get("/no-autorizado", function(){
+    return redirect()->json(["mensaje" => "Debe iniciar sesion"]);
+})->name("login");
