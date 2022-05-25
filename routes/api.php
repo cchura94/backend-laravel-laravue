@@ -48,5 +48,5 @@ Route::middleware("auth:sanctum")->group(function(){
 */
 
 Route::get("/no-autorizado", function(){
-    return redirect()->json(["mensaje" => "Debe iniciar sesion"]);
+    return response()->json(["mensaje" => "Debe iniciar sesion"]);
 })->name("login");
