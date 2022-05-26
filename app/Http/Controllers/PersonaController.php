@@ -133,7 +133,7 @@ class PersonaController extends Controller
         /*
             [1, 6, 3, 8]
         */
-        $materias = $request->materias;
+        return $materias = $request->materias;
         $gestion = $request->gestion;
         $rol = $request->rol;
 
