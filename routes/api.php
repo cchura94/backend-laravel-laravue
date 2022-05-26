@@ -31,7 +31,7 @@ Route::group(["middleware" => "auth:sanctum"], function(){
     // asignacion materias
     Route::post("persona/{id}/asignacion-materias", [PersonaController::class, "asignarMaterias"]);
     
-    Route::post("gestion/{id}/cabiar-gestion", [GestionController::class, "cambiarGestion"]);
+    Route::post("gestion/{id}/cambiar-gestion", [GestionController::class, "cambiarGestion"]);
     // recursos api
     Route::apiResource("gestion", GestionController::class);
     Route::apiResource("materia", MateriaController::class);

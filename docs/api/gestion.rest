@@ -1,8 +1,21 @@
 POST http://127.0.0.1:8000/api/gestion
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer 64|L0YTpuyw0qvhXrcudIYQf9trDOlNGqbFhZigqARG
+Authorization: Bearer 69|8SrFGm25w60KmxkpX4XTr3euvUZy5CkuCnmX7kjh
 
 {
-    "gestion": "2-2022"
+    "gestion": "1-2023"
 }
+
+###
+GET http://127.0.0.1:8000/api/gestion
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 69|8SrFGm25w60KmxkpX4XTr3euvUZy5CkuCnmX7kjh
+
+
+### Cambiar gestion
+POST http://127.0.0.1:8000/api/gestion/3/cambiar-gestion
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 69|8SrFGm25w60KmxkpX4XTr3euvUZy5CkuCnmX7kjh
