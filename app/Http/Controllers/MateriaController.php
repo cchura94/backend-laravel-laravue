@@ -14,7 +14,7 @@ class MateriaController extends Controller
      */
     public function index()
     {
-        $materias = Materia::paginate(10);
+        $materias = Materia::get();
 
         return response()->json($materias, 200);
     }

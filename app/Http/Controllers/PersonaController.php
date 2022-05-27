@@ -133,12 +133,12 @@ class PersonaController extends Controller
         /*
             [1, 6, 3, 8]
         */
-        return $materias = $request->materias;
+        $materias = $request->materias;
         $gestion = $request->gestion;
         $rol = $request->rol;
 
         $ass=[];
-        for ($i=0; $i<2; $i++) {
+        for ($i=0; $i<count($materias); $i++) {
             $ass[$materias[$i]] = ["gestion_id" => $gestion, "rol" => $rol];
         }
 
