@@ -70,8 +70,7 @@ class PersonaController extends Controller
      */
     public function show($id)
     {
-        $persona = Persona::find($id)
-                            ->materias;
+        $persona = Persona::find($id)->with('materias');
 
         return response()->json($persona, 200);
     }
