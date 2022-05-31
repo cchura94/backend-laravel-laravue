@@ -162,7 +162,7 @@ class PersonaController extends Controller
             $file->move("archivos/".$direccion_archivo);
             
             $user = User::find($request->user_id);
-            $user->perfil = "archivos/".$direccion_archivo;
+            $user->perfil = "archivos/$direccion_archivo";
             $user->save();
             return response()->json(["mensaje" =>  "Perfil modificado"]);
         }
