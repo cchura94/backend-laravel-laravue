@@ -159,7 +159,7 @@ class PersonaController extends Controller
     {
         if($file = $request->file("imagen")){
             $direccion_archivo = time() ."-".$file->getClientOriginalName();
-            $file->move("archivos/".$direccion_archivo);
+            $file->move("archivos/", $direccion_archivo);
             
             $user = User::find($request->user_id);
             $user->perfil = "archivos/$direccion_archivo";
