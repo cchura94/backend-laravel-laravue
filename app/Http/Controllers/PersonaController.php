@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Persona;
+use App\Models\User;
 use Faker\Provider\ar_EG\Person;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -152,5 +153,19 @@ class PersonaController extends Controller
             "error" => null,
             "status" => true
         ], 200);
+    }
+
+    public function cambiarPerfil(Request $request)
+    {
+        if($file = $request->file("imagen")){
+            $direccion_archivo = time() ."-".$file->getClientOriginalName();
+            $file->move("archivos/".$direccion_archivo);
+            
+            $user = User::find($request->user_id);
+            $user->perfil = "archivos/".$direccion_archivo;
+            $user->save();
+            return response()->json(["mensaje" =>  "Perfil modificado"]);
+        }
+        return response()->json(["mensaje" =>  "Ocurrio un problema al mabiar el perfil"]);
     }
 }

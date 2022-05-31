@@ -32,6 +32,8 @@ Route::group(["middleware" => "auth:sanctum"], function(){
     Route::post("persona/{id}/asignacion-materias", [PersonaController::class, "asignarMaterias"]);
     
     Route::post("gestion/{id}/cambiar-gestion", [GestionController::class, "cambiarGestion"]);
+    // cambio perfil
+    Route::post("user/cambiar-perfil", [PersonaController::class, "cambiarPerfil"]);
     // recursos api
     Route::apiResource("gestion", GestionController::class);
     Route::apiResource("materia", MateriaController::class);
