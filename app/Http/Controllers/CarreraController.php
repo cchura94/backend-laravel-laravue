@@ -14,6 +14,7 @@ class CarreraController extends Controller
      */
     public function index()
     {
+        $this->authorize("listar_carrera");
         // $data = ["status" =>  200, "data" =>  Carrera::all()];
         return response()->json(Carrera::all(), 200);
     }
@@ -26,6 +27,8 @@ class CarreraController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize("crear_carrera");
+
         // validar
         $request->validate([
             "nombre" => "required"
@@ -57,6 +60,8 @@ class CarreraController extends Controller
      */
     public function show($id)
     {
+        $this->authorize("mostrar_carrera");
+
         $carrera = Carrera::findOrFail($id);
         $carrera->materias;
         return response()->json($carrera, 200);

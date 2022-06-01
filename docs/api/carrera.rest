@@ -1,3 +1,19 @@
 GET http://127.0.0.1:8000/api/carrera
 Accept: application/json
-Authorization: Bearer 8|cgjBEP81XPyDFyAINNvOn8OKHQnu09mLJgLo9Vu4
+Authorization: Bearer 1|yIMKJ267Ufnfn1OZnmBG4FexldG00RREKOLi7WXl
+
+### otro user docente
+GET http://127.0.0.1:8000/api/carrera
+Accept: application/json
+Authorization: Bearer 2|EFoZlXnpZEMkkUgdQw1GWcVzWYMaFNqi2p7TA0db
+
+### estudiante
+
+GET http://127.0.0.1:8000/api/carrera
+Accept: application/json
+Authorization: Bearer 3|jQG32PyZYuYdw0NDMtTAj7zgQ2RhCfRIlvFDkpQl
+
+### mostrar
+GET http://127.0.0.1:8000/api/carrera/1
+Accept: application/json
+Authorization: Bearer 1|yIMKJ267Ufnfn1OZnmBG4FexldG00RREKOLi7WXl
